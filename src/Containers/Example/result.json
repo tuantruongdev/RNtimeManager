@@ -1,0 +1,490 @@
+{
+  "stt": "success",
+  "fromIU": true,
+  "tasks": {
+    "2020-08-24": [
+      {
+        "title": "Phát triển phần mềm hướng đối tượng với UML-1-20 (K17.KTPM.K1.D1.N02)",
+        "desc": "• Tiết: 1, 2, 3\n• Phòng: C5.405 C5\n• Giảng viên: Võ Văn Trường\n• Mã học phần: UML333\n• Sĩ số: 55\n• Số đăng ký: 55\n• Số tín chỉ: 3",
+        "startAt": "2020-08-24 06:45:00",
+        "finishAt": "2020-08-24 09:30:00",
+        "key": "lich-hoc"
+      }],
+    "2021-02-22": [
+      {
+        "title": "Ứng dụng thuật toán-2-20 (K17.KTPM.N05.TH1)",
+        "desc": "• Tiết: 2, 3, 4, 5\n• Phòng: C4.102 C4\n• Giảng viên: Nguyễn Thị Tuyển\n• Mã học phần: APA331\n• Sĩ số: 60\n• Số đăng ký: 54",
+        "startAt": "2021-02-22 07:40:00",
+        "finishAt": "2021-02-22 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Các phương pháp hình thức-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.104 C5\n• Giảng viên: Đào Thị Thu\n• Mã học phần: PPH222\n• Sĩ số: 65\n• Số đăng ký: 56\n• Số tín chỉ: 2",
+        "startAt": "2021-02-22 13:00:00",
+        "finishAt": "2021-02-22 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-02-23": [
+      {
+        "title": "Lập trình trên thiết bị di động-2-20 (K17.KTPM.N05.TH1)",
+        "desc": "• Tiết: 2, 3, 4, 5\n• Phòng: C4.102 C4\n• Giảng viên: Nguyễn Thị Tính\n• Mã học phần: POM331\n• Sĩ số: 60\n• Số đăng ký: 58",
+        "startAt": "2021-02-23 07:40:00",
+        "finishAt": "2021-02-23 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Ứng dụng thuật toán-2-20 (K17.KTPM.N05)",
+        "desc": "• Tiết: 8, 9, 10\n• Phòng: C5.102 C5\n• Giảng viên: Nguyễn Thị Tuyển\n• Mã học phần: APA331\n• Sĩ số: 60\n• Số đăng ký: 54\n• Số tín chỉ: 3",
+        "startAt": "2021-02-23 14:55:00",
+        "finishAt": "2021-02-23 17:40:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-02-25": [
+      {
+        "title": "Lập trình trên thiết bị di động-2-20 (K17.KTPM.N05)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.301 C5\n• Giảng viên: Nguyễn Thị Tính\n• Mã học phần: POM331\n• Sĩ số: 48\n• Số đăng ký: 58\n• Số tín chỉ: 3",
+        "startAt": "2021-02-25 13:00:00",
+        "finishAt": "2021-02-25 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-02-26": [
+      {
+        "title": "Phân tích và quản lý yêu cầu-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.302 C5\n• Giảng viên: Nguyễn Hồng Tân\n• Mã học phần: AMS321\n• Sĩ số: 65\n• Số đăng ký: 55\n• Số tín chỉ: 2",
+        "startAt": "2021-02-26 13:00:00",
+        "finishAt": "2021-02-26 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-01": [
+      {
+        "title": "Ứng dụng thuật toán-2-20 (K17.KTPM.N05.TH1)",
+        "desc": "• Tiết: 2, 3, 4, 5\n• Phòng: C4.102 C4\n• Giảng viên: Nguyễn Thị Tuyển\n• Mã học phần: APA331\n• Sĩ số: 60\n• Số đăng ký: 54",
+        "startAt": "2021-03-01 07:40:00",
+        "finishAt": "2021-03-01 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Các phương pháp hình thức-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.104 C5\n• Giảng viên: Đào Thị Thu\n• Mã học phần: PPH222\n• Sĩ số: 65\n• Số đăng ký: 56\n• Số tín chỉ: 2",
+        "startAt": "2021-03-01 13:00:00",
+        "finishAt": "2021-03-01 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-02": [
+      {
+        "title": "Lập trình trên thiết bị di động-2-20 (K17.KTPM.N05.TH1)",
+        "desc": "• Tiết: 2, 3, 4, 5\n• Phòng: C4.102 C4\n• Giảng viên: Nguyễn Thị Tính\n• Mã học phần: POM331\n• Sĩ số: 60\n• Số đăng ký: 58",
+        "startAt": "2021-03-02 07:40:00",
+        "finishAt": "2021-03-02 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Ứng dụng thuật toán-2-20 (K17.KTPM.N05)",
+        "desc": "• Tiết: 8, 9, 10\n• Phòng: C5.102 C5\n• Giảng viên: Nguyễn Thị Tuyển\n• Mã học phần: APA331\n• Sĩ số: 60\n• Số đăng ký: 54\n• Số tín chỉ: 3",
+        "startAt": "2021-03-02 14:55:00",
+        "finishAt": "2021-03-02 17:40:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-04": [
+      {
+        "title": "Lập trình trên thiết bị di động-2-20 (K17.KTPM.N05)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.301 C5\n• Giảng viên: Nguyễn Thị Tính\n• Mã học phần: POM331\n• Sĩ số: 48\n• Số đăng ký: 58\n• Số tín chỉ: 3",
+        "startAt": "2021-03-04 13:00:00",
+        "finishAt": "2021-03-04 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-05": [
+      {
+        "title": "Phân tích và quản lý yêu cầu-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.302 C5\n• Giảng viên: Nguyễn Hồng Tân\n• Mã học phần: AMS321\n• Sĩ số: 65\n• Số đăng ký: 55\n• Số tín chỉ: 2",
+        "startAt": "2021-03-05 13:00:00",
+        "finishAt": "2021-03-05 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-08": [
+      {
+        "title": "Ứng dụng thuật toán-2-20 (K17.KTPM.N05.TH1)",
+        "desc": "• Tiết: 2, 3, 4, 5\n• Phòng: C4.102 C4\n• Giảng viên: Nguyễn Thị Tuyển\n• Mã học phần: APA331\n• Sĩ số: 60\n• Số đăng ký: 54",
+        "startAt": "2021-03-08 07:40:00",
+        "finishAt": "2021-03-08 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Các phương pháp hình thức-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.104 C5\n• Giảng viên: Đào Thị Thu\n• Mã học phần: PPH222\n• Sĩ số: 65\n• Số đăng ký: 56\n• Số tín chỉ: 2",
+        "startAt": "2021-03-08 13:00:00",
+        "finishAt": "2021-03-08 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-09": [
+      {
+        "title": "Lập trình trên thiết bị di động-2-20 (K17.KTPM.N05.TH1)",
+        "desc": "• Tiết: 2, 3, 4, 5\n• Phòng: C4.102 C4\n• Giảng viên: Nguyễn Thị Tính\n• Mã học phần: POM331\n• Sĩ số: 60\n• Số đăng ký: 58",
+        "startAt": "2021-03-09 07:40:00",
+        "finishAt": "2021-03-09 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Ứng dụng thuật toán-2-20 (K17.KTPM.N05)",
+        "desc": "• Tiết: 8, 9, 10\n• Phòng: C5.102 C5\n• Giảng viên: Nguyễn Thị Tuyển\n• Mã học phần: APA331\n• Sĩ số: 60\n• Số đăng ký: 54\n• Số tín chỉ: 3",
+        "startAt": "2021-03-09 14:55:00",
+        "finishAt": "2021-03-09 17:40:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-11": [
+      {
+        "title": "Lập trình trên thiết bị di động-2-20 (K17.KTPM.N05)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.301 C5\n• Giảng viên: Nguyễn Thị Tính\n• Mã học phần: POM331\n• Sĩ số: 48\n• Số đăng ký: 58\n• Số tín chỉ: 3",
+        "startAt": "2021-03-11 13:00:00",
+        "finishAt": "2021-03-11 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-12": [
+      {
+        "title": "Phân tích và quản lý yêu cầu-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.302 C5\n• Giảng viên: Nguyễn Hồng Tân\n• Mã học phần: AMS321\n• Sĩ số: 65\n• Số đăng ký: 55\n• Số tín chỉ: 2",
+        "startAt": "2021-03-12 13:00:00",
+        "finishAt": "2021-03-12 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-15": [
+      {
+        "title": "Ứng dụng thuật toán-2-20 (K17.KTPM.N05.TH1)",
+        "desc": "• Tiết: 2, 3, 4, 5\n• Phòng: C4.102 C4\n• Giảng viên: Nguyễn Thị Tuyển\n• Mã học phần: APA331\n• Sĩ số: 60\n• Số đăng ký: 54",
+        "startAt": "2021-03-15 07:40:00",
+        "finishAt": "2021-03-15 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Các phương pháp hình thức-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.104 C5\n• Giảng viên: Đào Thị Thu\n• Mã học phần: PPH222\n• Sĩ số: 65\n• Số đăng ký: 56\n• Số tín chỉ: 2",
+        "startAt": "2021-03-15 13:00:00",
+        "finishAt": "2021-03-15 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-16": [
+      {
+        "title": "Lập trình trên thiết bị di động-2-20 (K17.KTPM.N05.TH1)",
+        "desc": "• Tiết: 2, 3, 4, 5\n• Phòng: C4.102 C4\n• Giảng viên: Nguyễn Thị Tính\n• Mã học phần: POM331\n• Sĩ số: 60\n• Số đăng ký: 58",
+        "startAt": "2021-03-16 07:40:00",
+        "finishAt": "2021-03-16 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Ứng dụng thuật toán-2-20 (K17.KTPM.N05)",
+        "desc": "• Tiết: 8, 9, 10\n• Phòng: C5.102 C5\n• Giảng viên: Nguyễn Thị Tuyển\n• Mã học phần: APA331\n• Sĩ số: 60\n• Số đăng ký: 54\n• Số tín chỉ: 3",
+        "startAt": "2021-03-16 14:55:00",
+        "finishAt": "2021-03-16 17:40:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-18": [
+      {
+        "title": "Lập trình trên thiết bị di động-2-20 (K17.KTPM.N05)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.301 C5\n• Giảng viên: Nguyễn Thị Tính\n• Mã học phần: POM331\n• Sĩ số: 48\n• Số đăng ký: 58\n• Số tín chỉ: 3",
+        "startAt": "2021-03-18 13:00:00",
+        "finishAt": "2021-03-18 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-19": [
+      {
+        "title": "Phân tích và quản lý yêu cầu-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.302 C5\n• Giảng viên: Nguyễn Hồng Tân\n• Mã học phần: AMS321\n• Sĩ số: 65\n• Số đăng ký: 55\n• Số tín chỉ: 2",
+        "startAt": "2021-03-19 13:00:00",
+        "finishAt": "2021-03-19 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-22": [
+      {
+        "title": "Ứng dụng thuật toán-2-20 (K17.KTPM.N05.TH1)",
+        "desc": "• Tiết: 2, 3, 4, 5\n• Phòng: C4.102 C4\n• Giảng viên: Nguyễn Thị Tuyển\n• Mã học phần: APA331\n• Sĩ số: 60\n• Số đăng ký: 54",
+        "startAt": "2021-03-22 07:40:00",
+        "finishAt": "2021-03-22 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Các phương pháp hình thức-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.104 C5\n• Giảng viên: Đào Thị Thu\n• Mã học phần: PPH222\n• Sĩ số: 65\n• Số đăng ký: 56\n• Số tín chỉ: 2",
+        "startAt": "2021-03-22 13:00:00",
+        "finishAt": "2021-03-22 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-23": [
+      {
+        "title": "Lập trình trên thiết bị di động-2-20 (K17.KTPM.N05.TH1)",
+        "desc": "• Tiết: 2, 3, 4, 5\n• Phòng: C4.102 C4\n• Giảng viên: Nguyễn Thị Tính\n• Mã học phần: POM331\n• Sĩ số: 60\n• Số đăng ký: 58",
+        "startAt": "2021-03-23 07:40:00",
+        "finishAt": "2021-03-23 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Ứng dụng thuật toán-2-20 (K17.KTPM.N05)",
+        "desc": "• Tiết: 8, 9, 10\n• Phòng: C5.102 C5\n• Giảng viên: Nguyễn Thị Tuyển\n• Mã học phần: APA331\n• Sĩ số: 60\n• Số đăng ký: 54\n• Số tín chỉ: 3",
+        "startAt": "2021-03-23 14:55:00",
+        "finishAt": "2021-03-23 17:40:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-25": [
+      {
+        "title": "Lập trình trên thiết bị di động-2-20 (K17.KTPM.N05)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.301 C5\n• Giảng viên: Nguyễn Thị Tính\n• Mã học phần: POM331\n• Sĩ số: 48\n• Số đăng ký: 58\n• Số tín chỉ: 3",
+        "startAt": "2021-03-25 13:00:00",
+        "finishAt": "2021-03-25 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-26": [
+      {
+        "title": "Phân tích và quản lý yêu cầu-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.302 C5\n• Giảng viên: Nguyễn Hồng Tân\n• Mã học phần: AMS321\n• Sĩ số: 65\n• Số đăng ký: 55\n• Số tín chỉ: 2",
+        "startAt": "2021-03-26 13:00:00",
+        "finishAt": "2021-03-26 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-29": [
+      {
+        "title": "Ứng dụng thuật toán-2-20 (K17.KTPM.N05.TH1)",
+        "desc": "• Tiết: 2, 3, 4, 5\n• Phòng: C4.102 C4\n• Giảng viên: Nguyễn Thị Tuyển\n• Mã học phần: APA331\n• Sĩ số: 60\n• Số đăng ký: 54",
+        "startAt": "2021-03-29 07:40:00",
+        "finishAt": "2021-03-29 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Các phương pháp hình thức-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.104 C5\n• Giảng viên: Đào Thị Thu\n• Mã học phần: PPH222\n• Sĩ số: 65\n• Số đăng ký: 56\n• Số tín chỉ: 2",
+        "startAt": "2021-03-29 13:00:00",
+        "finishAt": "2021-03-29 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-03-30": [
+      {
+        "title": "Lập trình trên thiết bị di động-2-20 (K17.KTPM.N05.TH1)",
+        "desc": "• Tiết: 2, 3, 4, 5\n• Phòng: C4.102 C4\n• Giảng viên: Nguyễn Thị Tính\n• Mã học phần: POM331\n• Sĩ số: 60\n• Số đăng ký: 58",
+        "startAt": "2021-03-30 07:40:00",
+        "finishAt": "2021-03-30 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Ứng dụng thuật toán-2-20 (K17.KTPM.N05)",
+        "desc": "• Tiết: 8, 9, 10\n• Phòng: C5.102 C5\n• Giảng viên: Nguyễn Thị Tuyển\n• Mã học phần: APA331\n• Sĩ số: 60\n• Số đăng ký: 54\n• Số tín chỉ: 3",
+        "startAt": "2021-03-30 14:55:00",
+        "finishAt": "2021-03-30 17:40:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-04-01": [
+      {
+        "title": "Lập trình trên thiết bị di động-2-20 (K17.KTPM.N05)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.301 C5\n• Giảng viên: Nguyễn Thị Tính\n• Mã học phần: POM331\n• Sĩ số: 48\n• Số đăng ký: 58\n• Số tín chỉ: 3",
+        "startAt": "2021-04-01 13:00:00",
+        "finishAt": "2021-04-01 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-04-02": [
+      {
+        "title": "Phân tích và quản lý yêu cầu-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.302 C5\n• Giảng viên: Nguyễn Hồng Tân\n• Mã học phần: AMS321\n• Sĩ số: 65\n• Số đăng ký: 55\n• Số tín chỉ: 2",
+        "startAt": "2021-04-02 13:00:00",
+        "finishAt": "2021-04-02 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-04-05": [
+      {
+        "title": "Ứng dụng thuật toán-2-20 (K17.KTPM.N05.TH1)",
+        "desc": "• Tiết: 2, 3, 4, 5\n• Phòng: C4.102 C4\n• Giảng viên: Nguyễn Thị Tuyển\n• Mã học phần: APA331\n• Sĩ số: 60\n• Số đăng ký: 54",
+        "startAt": "2021-04-05 07:40:00",
+        "finishAt": "2021-04-05 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Các phương pháp hình thức-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.104 C5\n• Giảng viên: Đào Thị Thu\n• Mã học phần: PPH222\n• Sĩ số: 65\n• Số đăng ký: 56\n• Số tín chỉ: 2",
+        "startAt": "2021-04-05 13:00:00",
+        "finishAt": "2021-04-05 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-04-06": [
+      {
+        "title": "Lập trình trên thiết bị di động-2-20 (K17.KTPM.N05.TH1)",
+        "desc": "• Tiết: 2, 3, 4, 5\n• Phòng: C4.102 C4\n• Giảng viên: Nguyễn Thị Tính\n• Mã học phần: POM331\n• Sĩ số: 60\n• Số đăng ký: 58",
+        "startAt": "2021-04-06 07:40:00",
+        "finishAt": "2021-04-06 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Ứng dụng thuật toán-2-20 (K17.KTPM.N05)",
+        "desc": "• Tiết: 8, 9, 10\n• Phòng: C5.102 C5\n• Giảng viên: Nguyễn Thị Tuyển\n• Mã học phần: APA331\n• Sĩ số: 60\n• Số đăng ký: 54\n• Số tín chỉ: 3",
+        "startAt": "2021-04-06 14:55:00",
+        "finishAt": "2021-04-06 17:40:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-04-08": [
+      {
+        "title": "Lập trình trên thiết bị di động-2-20 (K17.KTPM.N05)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.301 C5\n• Giảng viên: Nguyễn Thị Tính\n• Mã học phần: POM331\n• Sĩ số: 48\n• Số đăng ký: 58\n• Số tín chỉ: 3",
+        "startAt": "2021-04-08 13:00:00",
+        "finishAt": "2021-04-08 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-04-09": [
+      {
+        "title": "Phân tích và quản lý yêu cầu-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.302 C5\n• Giảng viên: Nguyễn Hồng Tân\n• Mã học phần: AMS321\n• Sĩ số: 65\n• Số đăng ký: 55\n• Số tín chỉ: 2",
+        "startAt": "2021-04-09 13:00:00",
+        "finishAt": "2021-04-09 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-04-12": [
+      {
+        "title": "Các phương pháp hình thức-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.104 C5\n• Giảng viên: Đào Thị Thu\n• Mã học phần: PPH222\n• Sĩ số: 65\n• Số đăng ký: 56\n• Số tín chỉ: 2",
+        "startAt": "2021-04-12 13:00:00",
+        "finishAt": "2021-04-12 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-04-16": [
+      {
+        "title": "Phân tích và quản lý yêu cầu-2-20 (K17.KTPM.N04)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.302 C5\n• Giảng viên: Nguyễn Hồng Tân\n• Mã học phần: AMS321\n• Sĩ số: 65\n• Số đăng ký: 55\n• Số tín chỉ: 2",
+        "startAt": "2021-04-16 13:00:00",
+        "finishAt": "2021-04-16 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],"2021-05-02": [
+      {
+        "title": "Kỹ năng mềm-1-20 (K17.KTPM.MMT CHUNG.K1.D1.N01)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.103 C5\n• Mã học phần: SSK221\n• Sĩ số: 62\n• Số đăng ký: 62\n• Số tín chỉ: 2",
+        "startAt": "2021-05-02 13:00:00",
+        "finishAt": "2021-05-02 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-05-03": [
+      {
+        "title": "Phương pháp luận lập trình-1-20 (K17.KTPM.K1.D1.N02)",
+        "desc": "• Tiết: 3, 4, 5\n• Phòng: C5.206 C5\n• Giảng viên: Nguyễn Lan Oanh\n• Mã học phần: PRM321\n• Sĩ số: 60\n• Số đăng ký: 56\n• Số tín chỉ: 2",
+        "startAt": "2021-05-03 08:40:00",
+        "finishAt": "2021-05-03 11:25:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-05-04": [
+      {
+        "title": "Công nghệ phần mềm-1-20 (K17.KTPM.K1.D1.N02)",
+        "desc": "• Tiết: 1, 2, 3\n• Phòng: C5.206 C5\n• Giảng viên: Nguyễn Hồng Tân\n• Mã học phần: SOE232\n• Sĩ số: 60\n• Số đăng ký: 56\n• Số tín chỉ: 3",
+        "startAt": "2021-05-04 06:45:00",
+        "finishAt": "2021-05-04 09:30:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-05-07": [
+      {
+        "title": "Phát triển phần mềm hướng đối tượng với UML-1-20 (K17.KTPM.K1.D1.N02)",
+        "desc": "• Tiết: 1, 2, 3\n• Phòng: C5.405 C5\n• Giảng viên: Võ Văn Trường\n• Mã học phần: UML333\n• Sĩ số: 55\n• Số đăng ký: 55\n• Số tín chỉ: 3",
+        "startAt": "2021-05-07 06:45:00",
+        "finishAt": "2021-05-07 09:30:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Phương pháp luận lập trình-1-20 (K17.KTPM.K1.D1.N02)",
+        "desc": "• Tiết: 4, 5\n• Phòng: C5.405 C5\n• Giảng viên: Nguyễn Lan Oanh\n• Mã học phần: PRM321\n• Sĩ số: 60\n• Số đăng ký: 56\n• Số tín chỉ: 2",
+        "startAt": "2021-05-07 09:40:00",
+        "finishAt": "2021-05-07 11:25:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-05-08": [
+      {
+        "title": "Công nghệ phần mềm-1-20 (K17.KTPM.K1.D1.N02)",
+        "desc": "• Tiết: 1, 2\n• Phòng: C5.302 C5\n• Giảng viên: Nguyễn Hồng Tân\n• Mã học phần: SOE232\n• Sĩ số: 60\n• Số đăng ký: 56\n• Số tín chỉ: 3",
+        "startAt": "2021-05-08 06:45:00",
+        "finishAt": "2021-05-08 08:30:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Lập trình Java-1-20 (K17.KTPM.K1.D1.N02)",
+        "desc": "• Tiết: 3, 4, 5\n• Phòng: C5.405 C5\n• Giảng viên: Nguyễn Văn Núi\n• Mã học phần: PJA331\n• Sĩ số: 55\n• Số đăng ký: 55\n• Số tín chỉ: 3",
+        "startAt": "2021-05-08 08:40:00",
+        "finishAt": "2021-05-08 11:25:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-05-09": [
+      {
+        "title": "Kỹ năng mềm-1-20 (K17.KTPM.MMT CHUNG.K1.D1.N01)",
+        "desc": "• Tiết: 6, 7, 8\n• Phòng: C5.103 C5\n• Mã học phần: SSK221\n• Sĩ số: 62\n• Số đăng ký: 62\n• Số tín chỉ: 2",
+        "startAt": "2021-05-09 13:00:00",
+        "finishAt": "2021-05-09 15:45:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-05-10": [
+      {
+        "title": "Phương pháp luận lập trình-1-20 (K17.KTPM.K1.D1.N02)",
+        "desc": "• Tiết: 3, 4, 5\n• Phòng: C5.206 C5\n• Giảng viên: Nguyễn Lan Oanh\n• Mã học phần: PRM321\n• Sĩ số: 60\n• Số đăng ký: 56\n• Số tín chỉ: 2",
+        "startAt": "2021-05-10 08:40:00",
+        "finishAt": "2021-05-10 11:25:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Phát triển phần mềm hướng đối tượng với UML-1-20 (K17.KTPM.K1.D1.N02.TH1)",
+        "desc": "• Tiết: 6, 7, 8, 9, 10\n• Phòng: C6.PM301 C6\n• Giảng viên: Võ Văn Trường\n• Mã học phần: UML333\n• Sĩ số: 55\n• Số đăng ký: 55",
+        "startAt": "2021-05-10 13:00:00",
+        "finishAt": "2021-05-10 17:40:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-05-11": [
+      {
+        "title": "Công nghệ phần mềm-1-20 (K17.KTPM.K1.D1.N02)",
+        "desc": "• Tiết: 1, 2, 3\n• Phòng: C5.206 C5\n• Giảng viên: Nguyễn Hồng Tân\n• Mã học phần: SOE232\n• Sĩ số: 60\n• Số đăng ký: 56\n• Số tín chỉ: 3",
+        "startAt": "2021-05-11 06:45:00",
+        "finishAt": "2021-05-11 09:30:00",
+        "key": "lich-hoc"
+      }
+    ],
+    "2021-05-14": [
+      {
+        "title": "Phát triển phần mềm hướng đối tượng với UML-1-20 (K17.KTPM.K1.D1.N02)",
+        "desc": "• Tiết: 1, 2, 3\n• Phòng: C5.405 C5\n• Giảng viên: Võ Văn Trường\n• Mã học phần: UML333\n• Sĩ số: 55\n• Số đăng ký: 55\n• Số tín chỉ: 3",
+        "startAt": "2021-05-14 06:45:00",
+        "finishAt": "2021-05-14 09:30:00",
+        "key": "lich-hoc"
+      },
+      {
+        "title": "Phương pháp luận lập trình-1-20 (K17.KTPM.K1.D1.N02)",
+        "desc": "• Tiết: 4, 5\n• Phòng: C5.405 C5\n• Giảng viên: Nguyễn Lan Oanh\n• Mã học phần: PRM321\n• Sĩ số: 60\n• Số đăng ký: 56\n• Số tín chỉ: 2",
+        "startAt": "2021-05-14 09:40:00",
+        "finishAt": "2021-05-14 11:25:00",
+        "key": "lich-hoc"
+      }
+    ]
+  }
+}
