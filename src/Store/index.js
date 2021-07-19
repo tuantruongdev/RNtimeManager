@@ -15,11 +15,12 @@ import { configureStore } from '@reduxjs/toolkit'
 import startup from './Startup'
 import user from './User'
 import theme from './Theme'
-
+import reducer from './Agenda/agendaSlice'
 const reducers = combineReducers({
   startup,
   user,
   theme,
+  reducer
 })
 
 const persistConfig = {
