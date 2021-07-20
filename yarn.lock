@@ -1132,6 +1132,13 @@
     sudo-prompt "^9.0.0"
     wcwidth "^1.0.1"
 
+"@react-native-community/datetimepicker@^3.5.2":
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/@react-native-community/datetimepicker/-/datetimepicker-3.5.2.tgz#8e6feb30f2620e5abdf565d5fe74c0c04edcf6ae"
+  integrity sha512-TWRuAtr/DnrEcRewqvXMLea2oB+YF+SbtuYLHguALLxNJQLl/RFB7aTNZeF+OoH75zKFqtXECXV1/uxQUpA+sg==
+  dependencies:
+    invariant "^2.2.4"
+
 "@react-native-community/eslint-config@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@react-native-community/eslint-config/-/eslint-config-2.0.0.tgz#35dcc529a274803fc4e0a6b3d6c274551fb91774"
@@ -6221,6 +6228,11 @@ readable-stream@~2.3.6:
     safe-buffer "~5.1.1"
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
+
+reanimated-bottom-sheet@^1.0.0-alpha.22:
+  version "1.0.0-alpha.22"
+  resolved "https://registry.yarnpkg.com/reanimated-bottom-sheet/-/reanimated-bottom-sheet-1.0.0-alpha.22.tgz#01a200946f1a461f01f1e773e5b4961c2df2e53b"
+  integrity sha512-NxecCn+2iA4YzkFuRK5/b86GHHS2OhZ9VRgiM4q18AC20YE/psRilqxzXCKBEvkOjP5AaAvY0yfE7EkEFBjTvw==
 
 recast@^0.20.3:
   version "0.20.4"

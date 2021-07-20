@@ -1,9 +1,13 @@
-import React, {useState} from 'react';
-import {View, TouchableOpacity,Text,StatusBar,Image} from 'react-native';
+import React, {useState,useRef} from 'react';
+import {View, TouchableOpacity,Text,StatusBar,Image,Keyboard} from 'react-native';
 import {Agenda,LocaleConfig} from 'react-native-calendars';
-import { Icon } from "react-native-elements";
+import { Icon,Input ,Button } from "react-native-elements";
 import { useDispatch, useSelector } from 'react-redux'
 import {setValueAgenda,removeAgendaValue} from '../../Store/Agenda/agendaSlice'
+import Animated from 'react-native-reanimated';
+import BottomSheet from 'reanimated-bottom-sheet';
+import DateTimePicker from '@react-native-community/datetimepicker';
+import { current } from '@reduxjs/toolkit';
 
 
 LocaleConfig.locales['vi'] = {
@@ -17,11 +21,32 @@ LocaleConfig.locales['vi'] = {
 LocaleConfig.defaultLocale = 'vi';
 const timeToString = (time) => {
   const date = new Date(time);
+  //console.log("timetostring : "+date.toISOString());
+
   return date.toISOString().split('T')[0];
+};
+const timeToFullString = (time) => {
+  const date = new Date(time);
+  //console.log("timetostring : "+date.toISOString());
+
+  return date.toISOString();
 };
 
 
+
+const datetimeToTime= (time) => {
+  const date = new Date(time);
+
+
+  var h= date.toISOString().split('T')[1];
+   h=h.split(':');
+  const timeString=h[0]+":"+h[1];
+  return timeString;
+};
+
 const IndexExampleContainer = () => {
+ var bs= React.createRef();
+ var fall= new Animated.Value(1);
   const agendaStore  = useSelector(state =>state.reducer);
   const dispatch=useDispatch();
   function readTextFile() {
@@ -29,7 +54,57 @@ const IndexExampleContainer = () => {
       console.log(json, 'the json obj');
 }
 
+const plus7hour=(time)=>{
+  const date = new Date(time);
+  //console.log("timetostring : "+date.toISOString());
+
+  var year= date.toISOString().split('T')[0].split('-')[0];
+  var month= date.toISOString().split('T')[0].split('-')[1]-1;
+  var day= date.toISOString().split('T')[0].split('-')[2]-1;
+  var hour= date.toISOString().split('T')[1].split(':')[0];
+  var min= date.toISOString().split('T')[1].split(':')[1];
+  var timestamp= toTimestamp(year,month,day,hour,min);
+ // console.log("plus7hour "+datetimeToTime(timestamp +25200000));
+
+  return datetimeToTime( timeToFullString(timestamp +25200000));
+}
+
 //usage:
+  const [timePickerTime,setTimePickerTime] = useState(datetimeToTime(getCurrentTimestamp()) );
+  const [date, setDate] = useState(new Date(getTomorrowTimestamp()-86400000));
+  const [mode, setMode] = useState('date');
+  const [show, setShow] = useState(false);
+  const [subjcetTitle,setSubjectTitle]=useState("");
+  const [subjcetDesc,setSubjectDesc]=useState("");
+
+  const ref_input2 = useRef();
+ 
+
+  const onChange = (event, selectedDate) => {
+    const currentDate = selectedDate || date;
+    setShow(Platform.OS === 'ios');
+    setDate(currentDate);
+    setTimePickerTime(  plus7hour(currentDate) );
+   
+   
+  //  console.log(currentDate);
+  };
+
+  const showMode = (currentMode) => {
+    setShow(true);
+    setMode(currentMode);
+  };
+
+  const showDatepicker = () => {
+    showMode('date');
+  };
+
+  const showTimepicker = () => {
+    showMode('time');
+  };
+
+
+
 
 
 
@@ -97,34 +172,38 @@ const IndexExampleContainer = () => {
     }, 1000);
   };
   const checkTime= (time)=>{
-   
-   // console.log(timeToString(time));
- // console.log("current date "+getCurrentDate());
+
 
   if(getCurrentDate()==timeToString(time)){
- //   console.log("today timestamp is "+time);
-  //  console.log("today date is "+getCurrentDate());
+
     return "#f6ab58";
     }
-   // console.log("tmr timestamp "+getTomorrowTimestamp());
-   // console.log(time + 86400000);
-    
    if(getTomorrowTimestamp()==time ){
  //   console.log("match tmr");
     return "#9b58b5";
   }
       return "#12b195"  
   }
-  function toTimestamp(year,month,day){
-    var datum = new Date(Date.UTC(year,month,day,0,0,0));
+  function toTimestamp(year,month,day,hour,min){
+    var datum = new Date(Date.UTC(year,month,day,hour,min,0));
     return datum.getTime()+86400000;
    }
    function getTomorrowTimestamp() {
     var date = new Date().getDate();
     var month = new Date().getMonth() ;
     var year = new Date().getFullYear();
-    return(toTimestamp(year,month,date));
+    return(toTimestamp(year,month,date,0,0));
    }
+
+   function getCurrentTimestamp() {
+    var date = new Date().getDate();
+    var month = new Date().getMonth() ;
+    var year = new Date().getFullYear();
+    var hour = new Date().getHours();
+    var minute =new Date().getMinutes();
+    return(toTimestamp(year,month,date,hour,minute)-86400000);
+   }
+
 
   const renderItem = (item) => {
     
@@ -222,6 +301,166 @@ const IndexExampleContainer = () => {
     }
     return year + '-' + month + '-' + date;//format: dd-mm-yyyy;
 }
+  const renderHeader=()=>(
+    <View 
+    
+    style={{marginTop:5,height:35,backgroundColor:"#FAFAFA",alignItems:"center",justifyContent:"center",borderTopLeftRadius:25,borderTopRightRadius:25,}}
+    
+   >
+
+      <View
+      
+      style={{borderRadius:5,width:50,height:8,backgroundColor:"#999999"}}
+      ></View>
+    </View>
+  );
+  const renderInner=()=>(
+    <View style={{backgroundColor:"#FAFAFA",height:"100%"}}>
+
+    
+
+      {show && (
+        <DateTimePicker
+          testID="dateTimePicker"
+          value={date}
+          mode={mode}
+          is24Hour={true}
+          display="default"
+          onChange={onChange}
+        />
+      )}
+      <View style={{justifyContent:"center",flexDirection:"row"}}>
+    
+    <TouchableOpacity
+    style={{backgroundColor:"#09958a",borderRadius:5,marginBottom:25}}
+    onPress={showTimepicker}
+    >
+      <Text style={{margin:10,color:"white",fontWeight:"700",fontSize:20}}>
+      {timePickerTime}
+
+      </Text>
+
+    </TouchableOpacity>
+    <TouchableOpacity
+    style={{backgroundColor:"#09958a",borderRadius:5,marginBottom:25,marginLeft:10}}
+    onPress={showDatepicker}
+    >
+      <Text style={{margin:10,color:"white",fontWeight:"700",fontSize:20}}>
+     {timeToString(date)}
+
+      </Text>
+
+    </TouchableOpacity>
+ 
+    </View>
+
+      <Input
+      returnKeyType="next"
+      style={{}}
+      containerStyle={{}}
+      disabledInputStyle={{ background: "#ddd" }}
+      inputContainerStyle={{marginLeft:20,marginRight:20}}
+      inputStyle={{}}
+      label="Tiêu đề"
+      labelStyle={{marginLeft:20}}
+      labelProps={{}}
+      leftIcon={ <Icon
+        color="#999999"
+        name="subject"
+       style={{ }}/>}
+       onChangeText={(text)=>{
+        setSubjectTitle(text);
+
+       }}
+      leftIconContainerStyle={{}}
+      placeholder="Tiêu đề công việc"
+      onSubmitEditing={() => ref_input2.current.focus()}
+    />
+       <Input
+       ref={ref_input2}
+      multiline={true}
+      containerStyle={{marginTop:-10}}
+      disabledInputStyle={{ background: "#ddd" }}
+      inputContainerStyle={{marginLeft:20,marginRight:20}}
+      inputStyle={{height:90}}
+      label="Mô tả"
+      labelStyle={{marginLeft:20}}
+      labelProps={{}}
+      leftIcon={ <Icon
+        color="#999999"
+        name="subject"
+       style={{ }}/>}
+       onChangeText={(text)=>{
+        setSubjectDesc(text);
+
+       }}
+
+
+      leftIconContainerStyle={{justifyContent:"flex-start"}}
+      placeholder="Mô tả thêm (Tùy chọn)"
+    />
+<View style={{flexDirection:"row",flex:1}}>
+  <View   style={{flex:4}} >
+<Button
+      style={{}}
+      buttonStyle={{ marginLeft:40,width: 120,alignSelf:"flex-end"}}
+      containerStyle={{ margin: 5 }}
+      disabledStyle={{
+        borderWidth: 2,
+        borderColor: "#00F"
+      }}
+      disabledTitleStyle={{ color: "#00F" }}
+      linearGradientProps={null}
+      icon={<Icon name="add" size={17} color="#0FF" />}
+      iconContainerStyle={{ background: "#000" }}
+      loadingProps={{ animating: true }}
+      loadingStyle={{}}
+      onPress={ ()=>{
+       // alert(subjcetTitle + " "+ subjcetDesc);
+        Keyboard.dismiss();
+        bs.current.snapTo(1);
+        var myTempAgendaData=JSON.parse(JSON.stringify(agendaStore));
+       if(myTempAgendaData[timeToString(date)]==undefined){
+        myTempAgendaData[timeToString(date)]=[];
+       }else{
+         if(myTempAgendaData[timeToString(date)][0].key=="none"){
+          myTempAgendaData[timeToString(date)].pop();
+         }
+       }
+       
+       // myTempAgendaData[timeToString(date)]=[];
+        myTempAgendaData[timeToString(date)].push({
+          name: subjcetTitle,
+          desc: subjcetDesc,
+          startAt:timeToString(date),
+          finishAt:timeToString(date),
+          key: "note",
+          height: Math.max(50, Math.floor(Math.random() * 150)),
+         date:timeToFullString(date),
+        });
+        const action= setValueAgenda(myTempAgendaData);
+        dispatch(action);
+       
+     //   console.log(timeToString(date))
+      }}
+      title="Thêm"
+      titleProps={{}}
+      titleStyle={{ marginHorizontal: 5 }}
+    />
+    
+</View>
+<View  style={{flex:2,marginTop:10}}>
+    <Icon
+    onPress={()=>{ bs.current.snapTo(1);
+      Keyboard.dismiss() }}
+
+    style={{}} name="delete" size={30} color="#F55" />
+    </View>
+</View>
+
+    </View>
+  );
+
   return (
     <View style={{flex: 1}}>
     <StatusBar
@@ -229,55 +468,58 @@ const IndexExampleContainer = () => {
         backgroundColor="#09958a"
        // barStyle={statusBarStyle}
          />
-   
-     <View
-     style={{height:40, backgroundColor:"#09958a",
-      flexDirection:"row"
-     ,
-     
-     justifyContent:"space-between",
-     alignItems:'center'
-    ,paddingLeft:15,
-    paddingRight:15
-    }}
-    
-     >
+   <BottomSheet
+   ref={bs}
+   snapPoints={[430,0]}
+   initialSnap={1}
+   callbackNode= {fall}
+   enabledGestureInteraction={true}
+   renderContent={renderInner}
+   renderHeader={renderHeader}
+   ></BottomSheet>
+        <View
+        style={{height:40, backgroundColor:"#09958a",
+          flexDirection:"row",
+        justifyContent:"space-between",
+        alignItems:'center'
+        ,paddingLeft:15,
+        paddingRight:15
+        }}>
+              <Icon
+                style={{}} 
+              color="#FFF"
+              name="refresh"
+              onPress={()=>{
+              const action=removeAgendaValue();
+              dispatch(action);
+              console.log(agendaStore);
+              }}/>
+
+       <Text style={{fontSize:16,fontWeight:"bold",color:"white",  marginBottom:5,alignSelf:"center",alignItems :"center"}}>Lịch cá nhân</Text>
        <Icon
-    style={{}} 
-       color="#FFF"
-       name="refresh"
-       onPress={()=>{
-      const action=removeAgendaValue();
-      dispatch(action);
-      
-      console.log(agendaStore);
-
-       }}
-       ></Icon>
-
-       <Text style={{fontSize:16,fontWeight:"bold",color:"white",  marginBottom:5,alignSelf:"center",alignItems :"center"
-    }}>Lịch cá nhân</Text>
-  <Icon
-   
        color="#FFF"
        name="add"
-      onPress={()=>{
-      //   loadItems({timestamp:getTomorrowTimestamp()-86400000});
-      //  dispatch(action);
-
-      }}
-      style={{ }} 
-      ></Icon>
+      onPress={()=> bs.current.snapTo(0)
+      }
+      style={{ }}/>
      </View>
+
+     <Animated.View 
+     
+     style={{flex:1,
+     opacity: Animated.add(0.7,Animated.multiply(fall,1.0)),
+     
+     }}
+    
+     >
       <Agenda
         items={agendaStore}
-     loadItemsForMonth={loadItems}
+        loadItemsForMonth={loadItems}
         selected={getCurrentDate()}
         renderItem={renderItem}
-       // renderEmptyDate={renderEmptyItem}
-      //  renderEmptyData={renderEmptyItem}
-      
+
       />
+      </Animated.View>
     </View>
   );
 };
