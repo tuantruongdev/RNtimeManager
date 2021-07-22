@@ -15,9 +15,9 @@ function Notifications() {
       
 
       
-      await  AsyncStorage.setItem("taskslist","{}");
+    //  await  AsyncStorage.setItem("taskslist","{}");
       await  AsyncStorage.getItem("taskslist",(err,result)=>{
-        console.log(JSON.parse(result));
+        console.log(result);
        })
       return;
 

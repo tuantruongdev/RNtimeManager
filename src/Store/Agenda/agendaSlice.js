@@ -6,7 +6,7 @@ const agendaSlice= createSlice({
     reducers:{
         setValueAgenda(state,action){
             console.log("set value");
-          return action.payload;
+           return action.payload;
 
         },
         removeAgendaValue(state){

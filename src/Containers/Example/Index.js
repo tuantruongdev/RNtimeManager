@@ -70,6 +70,7 @@ const plus7hour=(time)=>{
 }
 
 //usage:
+  const [currentSelectedDay,setCurrentSelectedDay]=useState(getCurrentTimestamp());
   const [timePickerTime,setTimePickerTime] = useState(datetimeToTime(getCurrentTimestamp()) );
   const [date, setDate] = useState(new Date(getTomorrowTimestamp()-86400000));
   const [mode, setMode] = useState('date');
@@ -104,35 +105,64 @@ const plus7hour=(time)=>{
   };
 
 
+  var json ={};
+  try{
+    AsyncStorage.getItem("taskslist",(err,result)=>{
+    if(result!=null){
+    
+      json=JSON.parse(result);
+    }
+    else{
+      json={};
+    }
+ //   console.log("result loaditem");
+ //   console.log(result);
+   })
+  }catch(err){
+
+  }
 
 
 
+  const loadItems = async(day) => {
 
-  const  loadItems = async(day) => {
-    var json ={};
-    await AsyncStorage.getItem("taskslist",(err,result)=>{
-      json =JSON.parse(result);
-     })
-  //   let json = require("./result.json");
+
+   
+
+
+
     setTimeout(() => {
-      var tempAgendaData=JSON.parse(JSON.stringify(json));
-    //  let json = require("./result.json");
 
-     
+    //  console.log(json);
+
+      
+      var tempAgendaData=JSON.parse(JSON.stringify(agendaStore));
+     // let json = require("./result.json");
       for (let i = -15; i < 150; i++) {
         const time = day.timestamp + i * 24 * 60 * 60 * 1000;
         const strTime = timeToString(time);
         
-       // console.log(strTime+"\n");
+       
 
         
         if (!agendaStore[strTime]) {
-          if(json.tasks==undefined){
-            continue;
-          }
-          if(json.tasks[strTime]!=undefined){
+
+        //  console.log("1");
+        //  console.log(json);
+          /*
+          if(json.tasks[strTime]==undefined){
+            
+          }*/
+
+      
+        //  console.log(typeof json)
+          if(strTime in json.tasks){
            // console.log(strTime+"\n");
-          var tempDayTask=json.tasks[strTime];
+      //     console.log("2");
+       
+       
+       
+           var tempDayTask=json.tasks[strTime];
         //  console.log(Object.keys(tempDayTask).length);
       
             tempAgendaData[strTime] = [];
@@ -156,6 +186,7 @@ const plus7hour=(time)=>{
         }
        
           else{
+         //   console.log("3");
             tempAgendaData[strTime] = [];
          
             tempAgendaData[strTime].push({
@@ -424,52 +455,48 @@ const plus7hour=(time)=>{
       iconContainerStyle={{ background: "#000" }}
       loadingProps={{ animating: true }}
       loadingStyle={{}}
-      onPress={ async()=>{
+      onPress={async()=>{
        // alert(subjcetTitle + " "+ subjcetDesc);
         Keyboard.dismiss();
         bs.current.snapTo(1);
-try{
-
-        var tasklist={};
+        var taskListFromLocal={};
         await  AsyncStorage.getItem("taskslist",(err,result)=>{
-         tasklist=result;
+          taskListFromLocal=JSON.parse(result);
          })
 
 
-        var myTempAgendaData=JSON.parse(tasklist);
-        if(myTempAgendaData.tasks==undefined){
-          myTempAgendaData.tasks={};
-        }
+      //  var myTempAgendaData=JSON.parse(JSON.stringify(agendaStore));
 
-        if(myTempAgendaData.tasks[timeToString(date)]==undefined){
-          myTempAgendaData.tasks[timeToString(date)]=[]
-        }
-
-
-
+       if(! (timeToString(date) in taskListFromLocal.tasks)){
+        taskListFromLocal.tasks[timeToString(date)]=[];
+       }else{
+        
+        
+        if(taskListFromLocal.tasks[timeToString(date)][0].key=="none"){
+          taskListFromLocal.tasks[timeToString(date)].pop();
+         }
+       }
        
-      
-        myTempAgendaData.tasks[timeToString(date)].push({
-          title: subjcetTitle,
-          desc: subjcetDesc,
+       // myTempAgendaData[timeToString(date)]=[];
+       taskListFromLocal.tasks[timeToString(date)].push({
+        title: subjcetTitle,
+        desc: subjcetDesc,
           startAt:timeToString(date),
           finishAt:timeToString(date),
           key: "note",
           height: Math.max(50, Math.floor(Math.random() * 150)),
          date:timeToFullString(date),
         });
-
-     
-      
-       await AsyncStorage.setItem("taskslist",JSON.stringify(myTempAgendaData));
-
-      //  const action= setValueAgenda(myTempAgendaData);
+       // const action= setValueAgenda(myTempAgendaData);
       //  dispatch(action);
-      }
+      await  AsyncStorage.setItem("taskslist",JSON.stringify(taskListFromLocal));
+    
+    
+    //  const action= setValueAgenda({});
+      //   dispatch(action);
+         //loadItems({timestamp: currentSelectedDay})
 
-      catch(error){
-        console.error(error);
-      }
+
      //   console.log(timeToString(date))
       }}
       title="Thêm"
@@ -542,6 +569,7 @@ try{
     
      >
       <Agenda
+       onDayChange={(day) => {setCurrentSelectedDay(day.timestamp)}}
         items={agendaStore}
         loadItemsForMonth={loadItems}
         selected={getCurrentDate()}
