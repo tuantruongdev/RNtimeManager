@@ -8,7 +8,7 @@ import Animated from 'react-native-reanimated';
 import BottomSheet from 'reanimated-bottom-sheet';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { current } from '@reduxjs/toolkit';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 LocaleConfig.locales['vi'] = {
   monthNames: ['Tháng một','Tháng hai','Tháng ba','Tháng tư','Tháng năm','Tháng sáu','Tháng bảy','Tháng tám','Tháng chín','Tháng mười','Tháng mười một','Tháng mười hai'],
@@ -108,11 +108,17 @@ const plus7hour=(time)=>{
 
 
 
-  const loadItems = (day) => {
-    
+  const  loadItems = async(day) => {
+    var json ={};
+    await AsyncStorage.getItem("taskslist",(err,result)=>{
+      json =JSON.parse(result);
+     })
+  //   let json = require("./result.json");
     setTimeout(() => {
-      var tempAgendaData=JSON.parse(JSON.stringify(agendaStore));
-      let json = require("./result.json");
+      var tempAgendaData=JSON.parse(JSON.stringify(json));
+    //  let json = require("./result.json");
+
+     
       for (let i = -15; i < 150; i++) {
         const time = day.timestamp + i * 24 * 60 * 60 * 1000;
         const strTime = timeToString(time);
@@ -121,7 +127,10 @@ const plus7hour=(time)=>{
 
         
         if (!agendaStore[strTime]) {
-          if(json.tasks[strTime]!=null){
+          if(json.tasks==undefined){
+            continue;
+          }
+          if(json.tasks[strTime]!=undefined){
            // console.log(strTime+"\n");
           var tempDayTask=json.tasks[strTime];
         //  console.log(Object.keys(tempDayTask).length);
@@ -415,22 +424,33 @@ const plus7hour=(time)=>{
       iconContainerStyle={{ background: "#000" }}
       loadingProps={{ animating: true }}
       loadingStyle={{}}
-      onPress={ ()=>{
+      onPress={ async()=>{
        // alert(subjcetTitle + " "+ subjcetDesc);
         Keyboard.dismiss();
         bs.current.snapTo(1);
-        var myTempAgendaData=JSON.parse(JSON.stringify(agendaStore));
-       if(myTempAgendaData[timeToString(date)]==undefined){
-        myTempAgendaData[timeToString(date)]=[];
-       }else{
-         if(myTempAgendaData[timeToString(date)][0].key=="none"){
-          myTempAgendaData[timeToString(date)].pop();
-         }
-       }
+try{
+
+        var tasklist={};
+        await  AsyncStorage.getItem("taskslist",(err,result)=>{
+         tasklist=result;
+         })
+
+
+        var myTempAgendaData=JSON.parse(tasklist);
+        if(myTempAgendaData.tasks==undefined){
+          myTempAgendaData.tasks={};
+        }
+
+        if(myTempAgendaData.tasks[timeToString(date)]==undefined){
+          myTempAgendaData.tasks[timeToString(date)]=[]
+        }
+
+
+
        
-       // myTempAgendaData[timeToString(date)]=[];
-        myTempAgendaData[timeToString(date)].push({
-          name: subjcetTitle,
+      
+        myTempAgendaData.tasks[timeToString(date)].push({
+          title: subjcetTitle,
           desc: subjcetDesc,
           startAt:timeToString(date),
           finishAt:timeToString(date),
@@ -438,9 +458,18 @@ const plus7hour=(time)=>{
           height: Math.max(50, Math.floor(Math.random() * 150)),
          date:timeToFullString(date),
         });
-        const action= setValueAgenda(myTempAgendaData);
-        dispatch(action);
-       
+
+     
+      
+       await AsyncStorage.setItem("taskslist",JSON.stringify(myTempAgendaData));
+
+      //  const action= setValueAgenda(myTempAgendaData);
+      //  dispatch(action);
+      }
+
+      catch(error){
+        console.error(error);
+      }
      //   console.log(timeToString(date))
       }}
       title="Thêm"

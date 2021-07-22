@@ -12,15 +12,31 @@ function Notifications() {
         <TouchableOpacity
     style={{backgroundColor:"#09958a",borderRadius:5,marginBottom:25}}
     onPress={async()=>{
-      getTaskFromSVO();
+      
+
+      
+      await  AsyncStorage.setItem("taskslist","{}");
+      await  AsyncStorage.getItem("taskslist",(err,result)=>{
+        console.log(JSON.parse(result));
+       })
       return;
+
+     
+      //show tasklist
+    
+      await  AsyncStorage.getItem("taskslist",(err,result)=>{
+        console.log(JSON.parse(result));
+       })
+
+      //   getTaskFromSVO();
+   
 
       let returnObject= checkSmartName("DTC1854801030076","123").then(
         returnObj=>{
          
           if(returnObj._id!=undefined){
             console.log(returnObj._id);
-          login(returnObj._id,"Leminh771").then(
+          login(returnObj._id,"Leminh77").then(
             returnLogin=>{
             if(returnLogin!="error"){
               console.log(returnLogin.stt);

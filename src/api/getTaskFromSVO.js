@@ -5,39 +5,40 @@ async function getTaskFromSVO() {
   
    
    
-    let userData =undefined;
-    await  AsyncStorage.removeItem("userInfo");
+    let userData =null;
+   // await  AsyncStorage.removeItem("userInfo");
   await  AsyncStorage.getItem("userInfo",(err,result)=>{
        userData= JSON.parse(result);
       })
 
-    console.log(userData);
+    if(userData==null){
+        console.log("not login yet!");
+        return "error";
+    }
     
 
     const taskLink="https://api.dhdt.vn/calendar/task";
-    return "";
+
     try{
     var response=await  fetch(taskLink, {
         method: 'POST',
         headers: {
                     'Content-Type':'application/json;charset=UTF-8',
                     'Accept': 'application/json, text/plain, */*',
-                    'sso_token':'undefined',
-                    'refresh_token': 'undefined',
+                    'sso_token':userData.sso_token,
+                    'refresh_token': userData.refresh_token,
                     'if-none-match': '"W/\"b5b-3+NZGVqGPC6cHnb+39bL/VlxSY4\"',
                     'agent': '{\"brower\":\"SVOapp\",\"version\":\"6.1.3\",\"device_name\":\"ReacNativeApp\",\"unique_device_id\":\"8DA9BD10 - B0D0 - 4808 - AB34 - 4AF30AA044EC\",\"user_agent\":\"Mozilla / 5.0(iPhone; CPU iPhone OS 13_6_1 like Mac OS X) AppleWebKit / 605.1.15(KHTML, like Gecko) Mobile / 15E148\",\"system_name\":\"iOS\",\"device_model\":\"iPhone 7\",\"system_version\":\"13.6.1\"}'
         
         },
         body: JSON.stringify({
-            "type" :"user",
-            "_id" : userName,
-            "passwd":passWord
-            
+            "force_update" :"true",
+           
         })
       });
     }catch(error){}
       const json = await response.json(); 
-    
+      AsyncStorage.setItem("taskslist",JSON.stringify(json));
 }
 
 
